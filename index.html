@@ -22,10 +22,24 @@
         <h1>High Rollers</h1>
         <h2>Roll Your Way to Victory!</h2>
         <div class="buttons">
-            <button type="button" class="btn btn-dark">Instructions</button>
-            <button type="button" class="btn btn-dark">Edit Player Names</button> 
+            <button type="button" class="btn btn-dark" onclick="dispalyInstructions()">Instructions</button>
+            <button type="button" class="btn btn-dark" onclick="editNames()">Edit Player Names</button> 
+            <button type="button" class="btn btn-dark" onclick="restartGame()">Restart</button>
         </div>
     </header>
+
+    <div class="hidden">
+        <h2>Instructions</h2>
+        <ul>
+            <li>Players have the option to edit their names by clicking the "edit names" button</li>
+            <li>Click "Roll Dice" to roll the dice</li>
+            <li>Each player gets to play twice then pass it over </li>
+            <li>Click "Switch" to move to the next player</li>
+            <li>The sum of the dice will be the points players get</li>
+            <li>Player with the highest points wins</li>
+            <li>Click "Restart" to restart the game</li>
+        </ul>
+    </div>
     
     <div class="players">
     <div class="firstPlayer">
@@ -42,8 +56,10 @@
         <img src="/images/die-1.jpg" alt="dice1" id="die-1" />
         <img src="/images/die-1.jpg" alt="dice2" id="die-2" />
       </div>
-      <button type="button" class="btn btn-dark">Roll Dice</button>
-      <button type="button" class="btn btn-dark">Restart</button>
+      <div class="diceButtons">
+      <button type="button" class="btn btn-dark" onclick="rollDice()">Roll Dice</button>
+      <button type="button" class="btn btn-dark" onclick="switchPlayers()">Switch</button>
+    </div>
     </div>
     <script src="index.js"></script>
   </body>
