@@ -18,13 +18,33 @@
     ></script>
   </head>
   <body>
+    <header>
+        <h1>High Rollers</h1>
+        <h2>Roll Your Way to Victory!</h2>
+        <div class="buttons">
+            <button type="button" class="btn btn-dark">Instructions</button>
+            <button type="button" class="btn btn-dark">Edit Player Names</button> 
+        </div>
+    </header>
+    
+    <div class="players">
+    <div class="firstPlayer">
+        <h1 id="player1">Player 1</h1>
+    </div>
+
+     <div class="secondPlayer">
+      <h1 id="player2">Player 2</h1>
+     </div>
+    </div>
+
     <div class="container">
       <div class="dice-container">
         <img src="/images/die-1.jpg" alt="dice1" id="die-1" />
-        <img src="/images/die-6..jpg" alt="dice2" id="die-2" />
+        <img src="/images/die-1.jpg" alt="dice2" id="die-2" />
       </div>
+      <button type="button" class="btn btn-dark">Roll Dice</button>
+      <button type="button" class="btn btn-dark">Restart</button>
     </div>
-
     <script src="index.js"></script>
   </body>
 </html>
