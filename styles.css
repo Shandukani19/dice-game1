@@ -4,45 +4,44 @@ body {
 
 header {
   background-image: url(/images/pexels-red.jpg);
-  height:350px;
+  height: 350px;
   width: 100%;
   margin: 20px 0;
-  
 }
 
-.header{
-    color: #ececec;
-    text-align: center;
+.header {
+  color: #ececec;
+  text-align: center;
 }
 
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 
-.players{
-    display: flex;
-    justify-content: space-around;
+.players {
+  display: flex;
+  justify-content: space-around;
 }
-.player{
-    background-color: #ececec;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.container{
-    border-radius: 5px;
-    width:40%;
-    background-color: black;
-    padding-bottom: 20px;
-    
+.firstPlayer, .secondPlayer {
+  background-color: #ececec;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-img{
-height: 90px;
-padding: 10px;
-padding-bottom: 20px;
+.container {
+  border-radius: 5px;
+  width: 100px;
+  background-color: black;
+  padding-bottom: 20px;
 }
 
-.diceButton{
-padding-bottom: 15px;
+img {
+  height: 90px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.diceButton {
+  padding-bottom: 15px;
 }
