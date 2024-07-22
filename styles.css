@@ -37,6 +37,16 @@ header {
 }
 
 /* main content css starts */
+.startGame {
+  text-align: center;
+  font-size: 70px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.play{
+  margin: 50px 0;
+}
+
 .players {
   display: flex;
   justify-content: space-around;
@@ -51,8 +61,7 @@ header {
 
 .container {
   border-radius: 5px;
-  min-width: 300px;
-  max-width: 100%;
+  max-width: 300px;
   margin: 0 auto;
   text-align: center;
   background-color: black;
