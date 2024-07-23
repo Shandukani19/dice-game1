@@ -94,3 +94,14 @@ img {
   width: 15vh;
 }
 /* main content css ends */
+
+/* JS */
+.shake{
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake{
+  0%{transform: rotate(8deg);}
+  50%{transform: rotate(-8deg);}
+  100%{transform: rotate(8deg);}
+}
