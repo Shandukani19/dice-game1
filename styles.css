@@ -75,8 +75,11 @@ img {
   padding-bottom: 30px;
 }
 
+.dice-container{
+  padding-top: 10px;
+}
+
 .diceButtons {
-  padding-bottom: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
