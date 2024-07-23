@@ -1,3 +1,41 @@
+// display instructions button
+function displayInstructions() {
+  const instructions = document.getElementById("hidden");
+  instructions.style.display =
+    instructions.style.display === "none" ? "block" : "none";
+}
+
+// edit player names button
+function editNames() {
+  const player1 = prompt("Enter name for Player 1:", "Player 1");
+  const player2 = prompt("Enter name for Player 2:", "Player 2");
+
+  if (player1 !== null && player1 !== "") {
+    document.getElementById("player1").textContent = player1;
+  }
+  if (player2 !== null && player2 !== "") {
+    document.getElementById("player2").textContent = player2;
+  }
+}
+
+// restart game button
+function restartGame() {
+  // Reset the score
+  document.getElementById("score").textContent = "0";
+
+  // Reset player names
+  document.getElementById("player1").textContent = "Player 1";
+  document.getElementById("player2").textContent = "Player 2";
+
+  // Hide instructions
+  document.getElementById("hidden").style.display = "none";
+
+  // Reset dice images
+  document.getElementById("die-1").src = "/images/die-1.jpg";
+  document.getElementById("die-2").src = "/images/die-1.jpg";
+}
+
+// rolling dice
 function rollDice() {
   const dice1 = document.getElementById("die-1");
   const dice2 = document.getElementById("die-2");
@@ -20,6 +58,7 @@ function rollDice() {
     dice2.classList.remove("shake");
 
     // Change dice images randomly
+
     const randomDice1 =
       diceImages[Math.floor(Math.random() * diceImages.length)];
     const randomDice2 =
