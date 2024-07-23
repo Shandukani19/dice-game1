@@ -44,7 +44,7 @@ header {
   font-family: "Permanent Marker", cursive;
 }
 
-.play{
+.play {
   margin: 50px 0;
 }
 
@@ -83,6 +83,10 @@ img {
   align-items: center;
 }
 
+.score {
+  align-items: center;
+  text-align: center;
+}
 .gameButtons {
   width: 20vh;
 }
