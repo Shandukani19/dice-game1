@@ -1,57 +1,3 @@
-// rolling dice
-let currentPlayer = 1;
-let player1Score = 0;
-let player2Score = 0;
-let player1Name = "Player 1"; // Default name for Player 1
-let player2Name = "Player 2"; // Default name for Player 2
-
-// roll dice function
-function rollDice() {
-  const dice1 = document.getElementById("die-1");
-  const dice2 = document.getElementById("die-2");
-  const diceImages = [
-    "die-1.jpg",
-    "die-2.jpg",
-    "die-3.jpg",
-    "die-4.jpg",
-    "die-5.jpg",
-    "die-6.jpg",
-  ];
-
-  // Add shake animation
-  dice1.classList.add("shake");
-  dice2.classList.add("shake");
-
-  setTimeout(() => {
-    // Remove shake animation after 0.5s
-    dice1.classList.remove("shake");
-    dice2.classList.remove("shake");
-
-    // Generate random dice values
-    const randomValue1 = Math.floor(Math.random() * 6) + 1;
-    const randomValue2 = Math.floor(Math.random() * 6) + 1;
-
-    // Change dice images based on random values
-    dice1.src = `/images/die-${randomValue1}.jpg`;
-    dice2.src = `/images/die-${randomValue2}.jpg`;
-
-    // Calculate the sum of the dice values
-    const diceSum = randomValue1 + randomValue2;
-
-    // Assign the score to the current player
-    if (currentPlayer === 1) {
-      player1Score += diceSum;
-      document.getElementById("player1score").textContent = player1Score;
-      checkWinner(player1Score, player1Name); // Check if Player 1 is the winner
-    } else {
-      player2Score += diceSum;
-      document.getElementById("player2score").textContent = player2Score;
-      checkWinner(player2Score, player2Name); // Check if Player 2 is the winner
-    }
-  }, 500); // Duration of the shake animation
-}
-
-
 // display instructions button ?
 function displayInstructions() {
   const instructions = document.getElementById("hidden");
@@ -107,19 +53,69 @@ function restartGame() {
   document.getElementById("startGame").textContent = "Let's Play!";
 }
 
+// rolling dice
+let currentPlayer = 1;
+let player1Score = 0;
+let player2Score = 0;
+let player1Name = "Player 1"; // Default name for Player 1
+let player2Name = "Player 2"; // Default name for Player 2
+
+// roll dice function
+function rollDice() {
+  const dice1 = document.getElementById("die-1");
+  const dice2 = document.getElementById("die-2");
+  const diceImages = [
+    "die-1.jpg",
+    "die-2.jpg",
+    "die-3.jpg",
+    "die-4.jpg",
+    "die-5.jpg",
+    "die-6.jpg",
+  ];
+
+  // Add shake animation
+  dice1.classList.add("shake");
+  dice2.classList.add("shake");
+
+  setTimeout(() => {
+    // Remove shake animation after 0.5s
+    dice1.classList.remove("shake");
+    dice2.classList.remove("shake");
+
+    // Generate random dice values
+    const randomValue1 = Math.floor(Math.random() * 6) + 1;
+    const randomValue2 = Math.floor(Math.random() * 6) + 1;
+
+    // Change dice images based on random values
+    dice1.src = `/images/die-${randomValue1}.jpg`;
+    dice2.src = `/images/die-${randomValue2}.jpg`;
+
+    // Calculate the sum of the dice values
+    const diceSum = randomValue1 + randomValue2;
+
+    // Assign the score to the current player
+    if (currentPlayer === 1) {
+      player1Score += diceSum;
+      document.getElementById("player1score").textContent = player1Score;
+      checkWinner(player1Score, player1Name); // Check if Player 1 is the winner
+    } else {
+      player2Score += diceSum;
+      document.getElementById("player2score").textContent = player2Score;
+      checkWinner(player2Score, player2Name); // Check if Player 2 is the winner
+    }
+  }, 500); // Duration of the shake animation
+}
 
 // switch players
 function switchPlayers() {
   currentPlayer = currentPlayer === 1 ? 2 : 1;
-  document.getElementById(
-    "current-player"
-  ).textContent = `Current Player: ${
+  document.getElementById("current-player").textContent = `Current Player: ${
     currentPlayer === 1 ? player1Name : player2Name
   }`;
 }
 
 // check the winner
-function checkWinner(score, player) {
+function checkWinner(score, playerName) {
   if (score >= winningScore) {
     document.getElementById(
       "startGame"
