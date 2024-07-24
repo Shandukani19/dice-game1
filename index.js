@@ -1,11 +1,11 @@
-
+// rolling dice
 let currentPlayer = 1;
 let player1Score = 0;
 let player2Score = 0;
 let player1Name = "Player 1"; // Default name for Player 1
 let player2Name = "Player 2"; // Default name for Player 2
 
-// rolling dice
+// roll dice function
 function rollDice() {
   const dice1 = document.getElementById("die-1");
   const dice2 = document.getElementById("die-2");
@@ -50,6 +50,7 @@ function rollDice() {
     }
   }, 500); // Duration of the shake animation
 }
+
 
 // display instructions button ?
 function displayInstructions() {
@@ -101,12 +102,18 @@ function restartGame() {
   // Reset dice images
   document.getElementById("die-1").src = "/images/die-1.jpg";
   document.getElementById("die-2").src = "/images/die-1.jpg";
+
+  // Reset the start game message
+  document.getElementById("startGame").textContent = "Let's Play!";
 }
+
 
 // switch players
 function switchPlayers() {
   currentPlayer = currentPlayer === 1 ? 2 : 1;
-  document.getElementById("current-player").textContent = `Current Player: ${
+  document.getElementById(
+    "current-player"
+  ).textContent = `Current Player: ${
     currentPlayer === 1 ? player1Name : player2Name
   }`;
 }
