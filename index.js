@@ -1,4 +1,4 @@
-// display instructions button
+// display instructions button ?
 function displayInstructions() {
   const instructions = document.getElementById("hidden");
   instructions.style.display =
@@ -18,7 +18,7 @@ function editNames() {
   }
 }
 
-// restart game button
+// restart game button ?
 function restartGame() {
   // Reset the score
   document.getElementById("score").textContent = "0";
@@ -36,6 +36,10 @@ function restartGame() {
 }
 
 // rolling dice
+let currentPlayer = 1;
+let player1Score = 0;
+let player2Score = 0;
+
 function rollDice() {
   const dice1 = document.getElementById("die-1");
   const dice2 = document.getElementById("die-2");
@@ -57,13 +61,32 @@ function rollDice() {
     dice1.classList.remove("shake");
     dice2.classList.remove("shake");
 
-    // Change dice images randomly
+    // Generate random dice values
+    const randomValue1 = Math.floor(Math.random() * 6) + 1;
+    const randomValue2 = Math.floor(Math.random() * 6) + 1;
 
-    const randomDice1 =
-      diceImages[Math.floor(Math.random() * diceImages.length)];
-    const randomDice2 =
-      diceImages[Math.floor(Math.random() * diceImages.length)];
-    dice1.src = `/images/${randomDice1}`;
-    dice2.src = `/images/${randomDice2}`;
+    // Change dice images based on random values
+    dice1.src = `/images/die-${randomValue1}.jpg`;
+    dice2.src = `/images/die-${randomValue2}.jpg`;
+
+    // Calculate the sum of the dice values
+    const diceSum = randomValue1 + randomValue2;
+
+    // Assign the score to the current player
+    if (currentPlayer === 1) {
+      player1Score += diceSum;
+      document.getElementById("player1score").textContent = player1Score;
+    } else {
+      player2Score += diceSum;
+      document.getElementById("player2score").textContent = player2Score;
+    }
   }, 500); // Duration of the shake animation
+}
+
+// switch players
+function switchPlayers() {
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
+  document.getElementById(
+    "current-player"
+  ).textContent = `Current Player: Player ${currentPlayer}`;
 }

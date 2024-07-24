@@ -60,6 +60,13 @@ header {
   margin-bottom: 20px;
 }
 
+.current-player{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
 .container {
   border-radius: 5px;
   max-width: 300px;
