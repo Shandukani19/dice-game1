@@ -18,6 +18,19 @@ function editNames() {
   }
 }
 
+// set the winning score
+let winningScore = 50; // Default winning score
+
+function setScore() {
+  const score = prompt("Set the winning score:", "50");
+  if (score !== null && score !== "" && !isNaN(score) && Number(score) > 0) {
+    winningScore = Number(score);
+  } else {
+    winningScore = 50; // Default score if no input
+  }
+  alert(`Winning score set to ${winningScore}`);
+}
+
 // restart game button ?
 function restartGame() {
   // Reset the score
@@ -89,4 +102,12 @@ function switchPlayers() {
   document.getElementById(
     "current-player"
   ).textContent = `Current Player: Player ${currentPlayer}`;
+}
+
+// check the winner
+function checkWinner(score, player) {
+  if (score >= winningScore) {
+    alert(`Player ${player} wins with a score of ${score}!`);
+    restartGame(); // Reset the game after a player wins
+  }
 }
