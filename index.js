@@ -107,7 +107,9 @@ function switchPlayers() {
 // check the winner
 function checkWinner(score, player) {
   if (score >= winningScore) {
-    alert(`Player ${player} wins with a score of ${score}!`);
-    restartGame(); // Reset the game after a player wins
+    document.getElementById(
+      "startGame"
+    ).textContent = `${player} wins with a score of ${score}!🥳`;
+    setTimeout(restartGame, 5000); // Restart the game after displaying the winning message for 3 seconds
   }
 }
