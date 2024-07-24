@@ -36,9 +36,18 @@ function setScore() {
 // restart game button ?
 function restartGame() {
   // Reset the score
-  document.getElementById("score").textContent = "0";
+  player1Score = 0;
+  player2Score = 0;
 
-  // Reset player names
+  // Reset the displayed scores
+  document.getElementById("player1score").textContent = "0";
+  document.getElementById("player2score").textContent = "0";
+
+  // Reset the player names
+  player1Name = "Player 1";
+  player2Name = "Player 2";
+
+  // Reset displayed player names
   document.getElementById("player1").textContent = "Player 1";
   document.getElementById("player2").textContent = "Player 2";
 
@@ -51,6 +60,11 @@ function restartGame() {
 
   // Reset the start game message
   document.getElementById("startGame").textContent = "Let's Play!";
+
+  // reset current player
+  currentPlayer = 1;
+  document.getElementById("current-player").textContent =
+    "Current Player: Player 1";
 }
 
 // rolling dice
