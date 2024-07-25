@@ -36,14 +36,14 @@ header {
 .hidden {
   display: none;
   align-items: center;
- margin: 0px auto;
- border-radius: 5px;
+  margin: 0px auto;
+  border-radius: 5px;
   background-color: #5f6769;
   color: white;
   width: 550px;
   padding: 10px;
 }
-.instructions{
+.instructions {
   display: flex;
   justify-content: space-between;
 }
@@ -80,8 +80,8 @@ header {
 
 .container {
   border-radius: 5px;
-  max-width: 300px;
-  margin: 0 auto;
+  width: 600px;
+  margin: 0px auto;
   text-align: center;
   background-color: black;
   padding-bottom: 20px;

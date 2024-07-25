@@ -140,6 +140,6 @@ function checkWinner(score, playerName) {
     document.getElementById(
       "startGame"
     ).textContent = `${playerName} wins with a score of ${score}!🥳`;
-    setTimeout(restartGame, 1000); // Restart the game after displaying the winning message for 3 seconds
+    setTimeout(restartGame, 2000); // Restart the game after displaying the winning message for 3 seconds
   }
 }
