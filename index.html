@@ -31,7 +31,8 @@
         <button
           type="button"
           class="btn btn-light"
-          onclick="dispalyInstructions()" >
+          onclick="displayInstructions()"
+        >
           Instructions
         </button>
         <button type="button" class="btn btn-light" onclick="editNames()">
@@ -46,26 +47,33 @@
       </div>
     </header>
 
-    <div class="play">
-      <h1 class="startGame" id="startGame">Lets Play!</h1>
-    </div>
-
     <div class="hidden" id="hidden">
+      <div class="instructions">
       <h2>Instructions</h2>
+      <button type="button" class="btn btn-light" onclick="closeInstructions()">
+          X
+        </button>
+        </div>
       <ul>
         <li>
-          Players can edit their names by clicking the "edit
-          names" button
+          Players can edit their names by clicking the "edit names" button
         </li>
-        <li>Set the desired winning score. Else it will be set to 50 by default</li>
+        <li>
+          Set the desired winning score. Else it will be set to 50 by default
+        </li>
         <li>Click "Roll Dice" to roll the dice</li>
         <li>Each player gets to play twice then pass it over</li>
         <li>Click "Switch" to move to the next player</li>
-        <li>The sum of the dice will be the points </li>
+        <li>The sum of the dice will be the points</li>
         <li>The first player to reach the winning score wins</li>
         <li>Click "New Game" to restart the game</li>
       </ul>
     </div>
+
+    <div class="play">
+      <h1 class="startGame" id="startGame">Lets Play!</h1>
+    </div>
+
 
     <div class="players">
       <div class="firstPlayer">
@@ -84,7 +92,9 @@
         </div>
       </div>
     </div>
-    <div class="current-player"><h5 id="current-player">Current Player: Player 1</h5></div>
+    <div class="current-player">
+      <h5 id="current-player">Current Player: Player 1</h5>
+    </div>
 
     <div class="container">
       <div class="dice-container">

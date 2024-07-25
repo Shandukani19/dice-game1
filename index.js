@@ -1,8 +1,14 @@
-// display instructions button ?
+// display instructions button
 function displayInstructions() {
   const instructions = document.getElementById("hidden");
   instructions.style.display =
     instructions.style.display === "none" ? "block" : "none";
+}
+
+// close instructions
+function closeInstructions() {
+   let cartDetails = document.getElementById("hidden");
+   cartDetails.style.display = "none";
 }
 
 // edit player names button
@@ -134,6 +140,6 @@ function checkWinner(score, playerName) {
     document.getElementById(
       "startGame"
     ).textContent = `${playerName} wins with a score of ${score}!🥳`;
-    setTimeout(restartGame, 300); // Restart the game after displaying the winning message for 3 seconds
+    setTimeout(restartGame, 1000); // Restart the game after displaying the winning message for 3 seconds
   }
 }

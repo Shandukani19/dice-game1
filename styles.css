@@ -35,6 +35,17 @@ header {
 /* instructions */
 .hidden {
   display: none;
+  align-items: center;
+ margin: 0px auto;
+ border-radius: 5px;
+  background-color: #5f6769;
+  color: white;
+  width: 550px;
+  padding: 10px;
+}
+.instructions{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* main content css starts */
@@ -60,7 +71,7 @@ header {
   margin-bottom: 20px;
 }
 
-.current-player{
+.current-player {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -82,7 +93,7 @@ img {
   padding-bottom: 30px;
 }
 
-.dice-container{
+.dice-container {
   padding-top: 10px;
 }
 
@@ -103,12 +114,18 @@ img {
 /* main content css ends */
 
 /* JS */
-.shake{
+.shake {
   animation: shake 0.5s infinite;
 }
 
-@keyframes shake{
-  0%{transform: rotate(8deg);}
-  50%{transform: rotate(-8deg);}
-  100%{transform: rotate(8deg);}
+@keyframes shake {
+  0% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
 }
