@@ -48,6 +48,12 @@ header {
   justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .hidden {
+    width: 300px;
+  }
+}
+
 /* main content css starts */
 .startGame {
   text-align: center;
