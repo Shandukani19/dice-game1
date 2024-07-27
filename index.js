@@ -7,8 +7,8 @@ function displayInstructions() {
 
 // close instructions
 function closeInstructions() {
-  let cartDetails = document.getElementById("hidden");
-  cartDetails.style.display = "none";
+  let gameInstructions = document.getElementById("hidden");
+  gameInstructions.style.display = "none";
 }
 
 // edit player names button
