@@ -26,6 +26,15 @@ header {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .buttons {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
+}
+
 .header {
   color: #ececec;
   text-align: center;
@@ -50,7 +59,7 @@ header {
 
 @media (max-width: 768px) {
   .hidden {
-    width: 250px;
+    width: 80%;
   }
 }
 
