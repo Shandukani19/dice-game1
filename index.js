@@ -1,3 +1,10 @@
+let currentPlayer = 1;
+let player1Score = 0;
+let player2Score = 0;
+let player1Name = "Player 1"; // Default name for Player 1
+let player2Name = "Player 2"; // Default name for Player 2
+let winningScore = 50; // Default winning score
+
 // display instructions button
 function displayInstructions() {
   const instructions = document.getElementById("hidden");
@@ -27,19 +34,20 @@ function editNames() {
 }
 
 // set the winning score
-let winningScore = 50; // Default winning score
-
 function setScore() {
   const score = prompt("Set the winning score:", "50");
   if (score !== null && score !== "" && !isNaN(score) && Number(score) > 0) {
     winningScore = Number(score);
+  } else if (isNaN(score) || score <= 0) {
+    alert("Please enter a valid positive number");
+    return;
   } else {
     winningScore = 50; // Default score if no input
   }
   alert(`Winning score set to ${winningScore}`);
 }
 
-// restart game button ?
+// restart game button
 function restartGame() {
   // Reset the score
   player1Score = 0;
@@ -74,13 +82,6 @@ function restartGame() {
 }
 
 // rolling dice
-let currentPlayer = 1;
-let player1Score = 0;
-let player2Score = 0;
-let player1Name = "Player 1"; // Default name for Player 1
-let player2Name = "Player 2"; // Default name for Player 2
-
-// roll dice function
 function rollDice() {
   const dice1 = document.getElementById("die-1");
   const dice2 = document.getElementById("die-2");
@@ -140,6 +141,6 @@ function checkWinner(score, playerName) {
     document.getElementById(
       "startGame"
     ).textContent = `${playerName} wins with a score of ${score}!🥳`;
-    setTimeout(restartGame, 20000); // Restart the game after displaying the winning message for 3 seconds
+    setTimeout(restartGame, 20000); // Restart the game after displaying the winning message for 20 seconds
   }
 }
