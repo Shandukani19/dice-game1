@@ -111,6 +111,10 @@ img {
 .gameButtons {
   width: 15vh;
 }
+
+.developer {
+  color: #ececec;
+}
 /* main content css ends */
 
 /* JS */
