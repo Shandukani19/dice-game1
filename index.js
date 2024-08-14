@@ -57,6 +57,9 @@ function restartGame() {
   document.getElementById("player1score").textContent = "0";
   document.getElementById("player2score").textContent = "0";
 
+  // Reset the default winning score
+  winningScore = 50;
+
   // Reset the player names
   player1Name = "Player 1";
   player2Name = "Player 2";
